@@ -112,3 +112,17 @@ button{
         font-size: 40px;
        }
 }
+
+@media screen and (max-width:768px) {
+
+  .a-sub {
+  display: none;
+}
+.a-desc{
+    font-weight: 200;
+}
+  .a-award{
+   display: none;
+  }
+
+}

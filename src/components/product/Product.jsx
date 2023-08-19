@@ -1,6 +1,12 @@
 import "./product.css";
+import { useContext } from "react";
+import { ThemeContext } from "../../context";
+
 
 const Product = ({img,link,text}) => {
+  const theme = useContext(ThemeContext);
+  const darkMode = theme.state.darkMode;
+
   return (
     <div className="p">
       <div className="p-browser">
@@ -12,7 +18,7 @@ const Product = ({img,link,text}) => {
         <img src={img} alt="" className="p-img" />
       </a>
       <div className="text" >
-        <a href={link} target="_blank" rel="noreferrer">
+        <a href={link} target="_blank" rel="noreferrer" style={{color: darkMode && "white"}}>
         {text}
         </a>
         </div>

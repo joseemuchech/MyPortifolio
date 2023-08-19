@@ -39,3 +39,20 @@
     display: none;
   }
 }
+
+
+@media screen and (max-width: 768px) {
+  .pl {
+    padding: 10px;
+  }
+
+  .pl-title {
+    font-size: 30px;
+    font-weight: 600;
+  }
+
+  .pl-list {
+    width: 100%;
+   justify-content: center;
+  }
+}

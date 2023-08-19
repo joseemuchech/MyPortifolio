@@ -122,3 +122,23 @@
 }
 
 }
+
+@media screen and (max-width: 768px) {
+
+  .i-left-wrapper {
+
+    padding: 30px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+  }
+  .i-name{
+  font-size: 40px;
+  }
+
+.i-desc{
+margin-top: 20px;
+}
+
+}

@@ -8,14 +8,13 @@ import { ThemeContext } from "../../context";
 
 const Contact = () => {
   const formRef = useRef();
-  const [done, setDone] = useState(false);
+  const [isloading, setIsLoading] = useState(false);
   const theme = useContext(ThemeContext);
   const darkMode = theme.state.darkMode;
 
-
-
-  const handleSubmit = (e) => {
+  const handleClick = (e) => {
     e.preventDefault();
+        setIsLoading(true);
     emailjs
       .sendForm(
         "service_56wfuqo",
@@ -25,9 +24,12 @@ const Contact = () => {
       )
       .then(
         (result) => {
+
           console.log(result.text);
-          setDone(true);
-          alert("Thank For Contacting me")
+          setTimeout(()=>{
+            setIsLoading(false);
+          });
+          alert("Thank For Contacting Josee");
           window.location.reload();
         },
         (error) => {
@@ -60,15 +62,15 @@ const Contact = () => {
         <div className="c-right">
           <p className="c-desc">
             <b>What’s your project?</b> Get in touch. Always available for
-            freelancing if the right project comes along. me.
+            freelancing if the right project comes along.
           </p>
-          <form ref={formRef} onSubmit={handleSubmit}>
-            <input style={{backgroundColor: darkMode && "rgba(170, 163, 163, 0.692)"}} type="text" placeholder="Name" required name="user_name" />
-            <input style={{backgroundColor: darkMode && "rgba(170, 163, 163, 0.692)"}} type="text" placeholder="Subject" required name="user_subject" />
-            <input style={{backgroundColor: darkMode && "rgba(170, 163, 163, 0.692)"}} type="text" placeholder="Email" required name="user_email" />
-            <textarea style={{backgroundColor: darkMode && "rgba(170, 163, 163, 0.692)"}} rows="5" placeholder="Message" required name="message" />
-            <button>Submit</button>
-            {done && "Thank you..."}
+          <form ref={formRef} onSubmit={handleClick} >
+            <input style={{backgroundColor: darkMode && "whitesmoke"}} type="text" placeholder="Name" required name="user_name" />
+            <input style={{backgroundColor: darkMode && "whitesmoke"}} type="text" placeholder="Subject" required name="user_subject" />
+            <input style={{backgroundColor: darkMode && "whitesmoke"}} type="email" placeholder="Email" required name="user_email" />
+            <textarea style={{backgroundColor: darkMode && "whitesmoke"}} rows="5" placeholder="Message" required name="message" />
+            {isloading ? <button >Sending...</button> : (<button>Send</button>)}
+            
           </form>
         </div>
       </div>
