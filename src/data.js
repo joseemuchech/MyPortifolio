@@ -1,22 +1,22 @@
 export const products = [
   {
     id: 1,
-    img: "img/safari.png",
+    img: "img/data1.png",
     text: "View",
-    link: "img/safari.png",
+    link: "img/data1.png",
 
   },
   {
     id: 2,
-    img: "img/jobs.png",
+    img: "img/new.png",
     text: "View",
-    link: "img/jobs.png",
+    link: "img/new.png",
   },
   {
     id: 3,
-    img: "img/ecom.png",
+    img: "img/vision.png",
     text: "View",
-    link: "img/ecom.png",
+    link: "img/vision.png",
   },
   {
     id: 4,
@@ -32,9 +32,45 @@ export const products = [
   },
   {
     id: 6,
-    img: "img/prog.png",
+    img: "img/jobs.png",
     text: "View",
-    link: "img/admin.png",
+    link: "img/jobs.png",
+  },
+  {
+    id: 7,
+    img: "img/data2.png",
+    text: "View",
+    link: "img/data2.png",
+  },
+  {
+    id: 8,
+    img: "img/cake.png",
+    text: "View",
+    link: "img/cake.png",
+  },
+  {
+    id: 9,
+    img: "img/safari.png",
+    text: "View",
+    link: "img/safari.png",
+  },
+  {
+    id: 10,
+    img: "img/heroadmin.png",
+    text: "View",
+    link: "img/heroadmin.png",
+  },
+  {
+    id: 11,
+    img: "img/web.png",
+    text: "View",
+    link: "img/web.png",
+  },
+  {
+    id: 12,
+    img: "img/menu.png",
+    text: "View",
+    link: "img/menu.png",
   },
 
 ];
